@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER START -->
+
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <!-- container for Moment.js output -->
+      <div id="currentDay" class="lead">
+        <div id="output"></div>
+    </div>
+          
+    </header>
+
+    <!-- MAIN CONTAINER START -->
+
+    <div class="container">
+
+        <!--9AM-->
+        <div class="row">
+            <!-- Span 1 of 12 columns -->
+             <div id="9am" class="col-1 bg-white p-3 border text-center">
+                <h8 class="vertical-center">9am</h4>
+             </div>
+       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+       <div id="save-task" class="col-1 bg-primary p-3 border">
+           <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+       </div>
+     </div>
+
+
+
+         <!--10AM-->
+             <div class="row">
+        <!-- Span 1 of 12 columns -->
+         <div id="10am" class="col-1 bg-white p-3 border text-center">
+            <h8 class="vertical-center">10am</h4>
+         </div>
+         <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+         <div id="save-task" class="col-1 bg-primary p-3 border">
+       <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+   </div>
+ </div>
+ 
+
+
+ <!--11AM-->
+ <div class="row">
+    <!-- Span 1 of 12 columns -->
+     <div id="11am" class="col-1 bg-white p-3 border text-center">
+        <h8 class="vertical-center">11am</h4>
+     </div>
+       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+      <div id="save-task" class="col-1 bg-primary p-3 border">
+   <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+
+ <!--12PM-->
+     <div class="row">
+<!-- Span 1 of 12 columns -->
+ <div id="12pm" class="col-1 bg-white p-3 border text-center">
+    <h8 class="vertical-center">12pm</h4>
+ </div>
+ <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+ <div id="save-task" class="col-1 bg-primary p-3 border">
+<img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+
+<!--1PM-->
+<div class="row">
+    <!-- Span 1 of 12 columns -->
+     <div id="1pm" class="col-1 bg-white p-3 border text-center">
+        <h8 class="vertical-center">1pm</h4>
+     </div>
+     <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+     <div id="save-task" class="col-1 bg-primary p-3 border">
+   <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+
+ <!--2PM-->
+     <div class="row">
+<!-- Span 1 of 12 columns -->
+ <div id="2pm" class="col-1 bg-white p-3 border text-center">
+    <h8 class="vertical-center">2pm</h4>
+ </div>
+       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+<div id="save-task" class="col-1 bg-primary p-3 border">
+<img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+<!--3PM-->
+<div class="row">
+    <!-- Span 1 of 12 columns -->
+     <div id="3pm" class="col-1 bg-white p-3 border text-center">
+        <h8 class="vertical-center">3pm</h4>
+     </div>
+       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+<div id="save-task" class="col-1 bg-primary p-3 border">
+   <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+
+ <!--4PM-->
+     <div class="row">
+<!-- Span 1 of 12 columns -->
+ <div id="4pm" class="col-1 bg-white p-3 border text-center">
+    <h8 class="vertical-center">4pm</h4>
+ </div>
+       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+<div id="save-task" class="col-1 bg-primary p-3 border">
+<img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+</div>
+</div>
+
+
+ <!--5PM-->
+ <div class="row">
+    <!-- Span 1 of 12 columns -->
+     <div id="5pm" class="col-1 bg-white p-3 border text-center">
+        <h8 class="vertical-center">5pm</h4>
+     </div>
+           <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+    <div id="save-task" class="col-1 bg-primary p-3 border">
+    <img src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+    </div>
+    </div>
+    
+      <!-- Timeblocks is above-->
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.map"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="./assets/js/script.js" ></script>
+</body>
+</html>
