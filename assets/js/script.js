@@ -1,4 +1,13 @@
-// STEP 4 : MAKE SURE ALL TASK PERSIST.
+window.onload = function() {
+    if (window.jQuery) {  
+        // jQuery is loaded  
+        alert("Let's plan this day");
+    } else {
+        // jQuery is not loaded
+        alert("Doesn't Work");
+    }
+}
+
 
 
 // STEP 1 : ADD DATE AND TIME TO THE HEADER.
@@ -8,16 +17,162 @@ output.innerHTML = getCurrentTime;
 
 // STEP  2: WHEN CLICK ON ROW FOR SPECIFIC HOUR THIS WILL BECOME EDITABLE.
 
-$("#edit-task").bind("click", function(){
+$('#edit-task').click(function() {
     var fields = $(".disabled");
      fields.removeClass("disabled");
      fields.addClass("enabled");
      fields.removeAttr("disabled", "");
  });
 
+
+ // STEP 3: SAVE BUTTON
+
+    $("#save-task").click(function(){
+        // localStorage.key=value
+        alert("You saved a task");
+        $(this).toggleClass('task');
+        // Define wheter its a favourite item based on the class
+        let val = $(this).hasClass('task');
+        // Set the localStorage
+        localStorage.setItem('input', val);
+    });  
+
+ // STEP 4: SAVE BUTTON
+
+
+
+
+ // STEP 5 : MAKE SURE ALL TASK PERSIST.
+
+
+
+
+
+// $('#edit-task').persist(function(){
+//     $('input').data( "task" );
+
+// });
+
+    // $('.persist-state').persistState('input');
+
+    
+
+//   // Getting the value of the selected field
+
+// var savedTasks = $('#').val();
+
+// // If there's no value selected, hide everything.
+// if(my_select_value == 0){
+//     $('.widget-test .row').hide();
+// }
+// // Otherwise, show the specific rows
+// if(my_select_value == 1){
+//     $('.widget-test .row').hide();
+//     $('.widget-test .row.one').show();
+// }
+// if(my_select_value == 2){
+//     $('.widget-test .row').hide();
+//     $('.widget-test .row.two').show();
+// }
+// if(my_select_value == 3){
+//     $('.widget-test .row').hide();
+//     $('.widget-test .row.three').show();
+// }
+
+     
+    
+    // undefined
+    // $( saveTask ).data( "hour" ); // {}
+
+
+// localStorage.setItem(key,value); to set
+// localStorage.getItem(key); to get.
+// key and value must be strings.
+// so in your context code will become
+
+
+ 
+// let $saveBtn = $('<div>');
+//     $col1SaveDiv.addClass('col-md-1');
+
+//     let $saveBtn = $('<i>');
+//     $saveBtn.attr('id',`saveid-${index}`);
+//     $saveBtn.attr('save-id',index);
+//     $saveBtn.attr('class',"far fa-save saveIcon")
+
+// // STEP 3: STORE INFO LOCALLY BY CLICK THE SAVE ICON.
+
+// var i = 0;
+
+// var value = "";
+
+//     $('#save-task').on("click", function() {
+//         localStorage.setItem('save-task', 'value');
+//         return localStorage.getItem('nameOfItem');
+//     });
+
+
+
+// function createItem() {
+// 	localStorage.setItem('save-task', 'value');
+// } 
+// createItem() // Creates a item named 'nameOfItem' and stores a value of 'value'
+
+// function getValue() {
+// 	return localStorage.getItem('nameOfItem');  
+// } // Gets the value of 'nameOfItem' and returns it
+// console.log(getValue()); //'value';
+
+
+// var test = false;
+// var saveIcon = document.querySelector('#save-task')
+
+// $('#save-task').on("click", function() {
+//     var saveTask = $("click");
+//     let saveTask = JSON.parse(localStorage.getItem("storedPlans"));
+
+//     let saveTask = JSON.parse(localStorage.getItem("storedPlans"));
+//     // if (test) { console.log(storedPlans); }
+
+//  }
+// );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // STEP 3 : ADD COLOR CODE FOR PAST HOURS, PRESENT, AND FUTURE HOURS OF THE SAME DAY.
 
+// make background color of / past hours red / current hour gray / future hours green
+// var hourPast = hourPast < currentTime;
+// var hourNow = getCurrentTime;
+// var hourFuture = hourFuture < currentTime;
 
+// // if currentTime > hourNow make background color gray//
+
+// $(document).ready(function() {
+
+// var hourNow = getCurrentTime;
+
+//     function backgroundColorEdit(){
+//         if (hourNow == getCurrentTime){
+//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#ff0000";
+//         }else if (hourNow < currentTime){
+//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#d3d3d3";
+//         }else 
+//         {
+//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#90ee90";
+//         }
+// }
 
 
 // var click = "",
@@ -48,52 +203,3 @@ $("#edit-task").bind("click", function(){
 //   // Do something
 // });
 
-
-// var output = document.getElementById('currentDay');
-// var numberDate = document.getElementById('date');
-
-// let d = new Date();
-// let day = d.getDay();
-// let ndate = d.toLocaleString();
-// console.log(ndate);
-
-// switch(day) {
-//     case 0:
-//         day = "Sunday";
-//         break;
-//     case 1:
-//         day = "Monday";
-//     case 2:
-//         day = "Tuesday";
-//     case 3:
-//         day = "Wednesday";
-//     case 4:
-//         day = "Thusrday";
-//     case 5:
-//         day = "Friday";
-//     case 6:
-//         day = "Saturday";
-// }
-
-
-
-
-// // here we can stablish moments with specific format.
-// // var currentDay = document.querySelector("#currentDay");
-// var currentTime = document.querySelector('#current-day');
-// var todayTime = new Date();
-
-// currentTime.textContent = todayTime.moment().format('MMMM Do YYYY, h:mm:ss a');
-
-// $('time').each(function(i, e) {
-//     var time = moment($(e).attr('datetime'));
-
-//     if(now.diff(time, 'days') <= 1) {
-//         $(e).html('<span>' + time.from(now) + '</span>');
-//     }
-// });
-
-
-// $('#currentDay').show('currentTime'); {
-
-// }
