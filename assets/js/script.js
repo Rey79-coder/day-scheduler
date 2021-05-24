@@ -1,5 +1,6 @@
-window.onload = function() {
-    if (window.jQuery) {  
+// ALERT USER WITH POSITIVE VIBES TO STAR THE DAY.
+window.onload = function () {
+    if (window.jQuery) {
         // jQuery is loaded  
         alert("Let's plan this day");
     } else {
@@ -8,178 +9,114 @@ window.onload = function() {
     }
 }
 
+//  DEFINE TASK COUNTER TO START FROM 0/
+var taskIdCounter = 0;
 
+// EMPY ARRAY REQUIRED TO HOLDS TASKS.
+var tasks = [];
 
 // STEP 1 : ADD DATE AND TIME TO THE HEADER.
 var getCurrentTime = moment().format("dddd, MMMM Do YYYY");
 output.innerHTML = getCurrentTime;
 
+// 1ST. FUNCTION TO CLICK ON ROW FOR SPECIFIC HOUR THIS WILL BECOME EDITABLE.
 
-// STEP  2: WHEN CLICK ON ROW FOR SPECIFIC HOUR THIS WILL BECOME EDITABLE.
 
-$('#edit-task').click(function() {
+$('#edit-task').click(function () {
     var fields = $(".disabled");
-     fields.removeClass("disabled");
-     fields.addClass("enabled");
-     fields.removeAttr("disabled", "");
- });
+    fields.removeClass("disabled");
+    fields.addClass("enabled");
+    fields.removeAttr("disabled", "");
+});
 
 
- // STEP 3: SAVE BUTTON
+///////  FOLLOWING BLOCK OF CODE WORK FOR THE FIRST BUTTON ONLY ////
 
-    $("#save-task").click(function(){
+var content = "";
+
+$(function () {   /// this is when the document is ready.
+    $(".mySaveBtn").click(function () {
         // localStorage.key=value
         alert("You saved a task");
-        $(this).toggleClass('task');
-        // Define wheter its a favourite item based on the class
-        let val = $(this).hasClass('task');
-        // Set the localStorage
-        localStorage.setItem('input', val);
-    });  
+    });
 
- // STEP 4: SAVE BUTTON
-
-
-
-
- // STEP 5 : MAKE SURE ALL TASK PERSIST.
-
-
-
-
-
-// $('#edit-task').persist(function(){
-//     $('input').data( "task" );
-
-// });
-
-    // $('.persist-state').persistState('input');
-
-    
-
-//   // Getting the value of the selected field
-
-// var savedTasks = $('#').val();
-
-// // If there's no value selected, hide everything.
-// if(my_select_value == 0){
-//     $('.widget-test .row').hide();
-// }
-// // Otherwise, show the specific rows
-// if(my_select_value == 1){
-//     $('.widget-test .row').hide();
-//     $('.widget-test .row.one').show();
-// }
-// if(my_select_value == 2){
-//     $('.widget-test .row').hide();
-//     $('.widget-test .row.two').show();
-// }
-// if(my_select_value == 3){
-//     $('.widget-test .row').hide();
-//     $('.widget-test .row.three').show();
-// }
-
-     
-    
-    // undefined
-    // $( saveTask ).data( "hour" ); // {}
-
-
-// localStorage.setItem(key,value); to set
-// localStorage.getItem(key); to get.
-// key and value must be strings.
-// so in your context code will become
-
-
- 
-// let $saveBtn = $('<div>');
-//     $col1SaveDiv.addClass('col-md-1');
-
-//     let $saveBtn = $('<i>');
-//     $saveBtn.attr('id',`saveid-${index}`);
-//     $saveBtn.attr('save-id',index);
-//     $saveBtn.attr('class',"far fa-save saveIcon")
-
-// // STEP 3: STORE INFO LOCALLY BY CLICK THE SAVE ICON.
-
-// var i = 0;
-
-// var value = "";
-
-//     $('#save-task').on("click", function() {
-//         localStorage.setItem('save-task', 'value');
-//         return localStorage.getItem('nameOfItem');
-//     });
-
+    $('.bg-light').css({ color: 'green' }); /// CHANGE FONT COLOR WITH METHOD
+}); 
 
 
 // function createItem() {
-// 	localStorage.setItem('save-task', 'value');
+// 	localStorage.setItem('taskDescription', 'everyHour'); 
+
 // } 
-// createItem() // Creates a item named 'nameOfItem' and stores a value of 'value'
+// createItem() 
+
+
+$('input[type=text]').each(function() {
+    // e.preventDefault();
+    // var everyHour = [];
+    // dailyT = value.push(dailyT);
+    // var i = 0;
+
+    // localStorage.setItem('taskDescription', 'everyHour'); 
+$('.userInput').click()
+    dailyT['taskDescription'] = $('.userInput').val([i++]);
+    dailyT[i++] = $(this).val();
+
+
+    // taskDescription.push(dailyT);  
+
+    var value = JSON.stringify(dailyT);
+       localStorage.setItem("taskDescription", value);
+
+}); 
+
+
+// dailyT['everyHour'] = $(".userInput").val();
+
+//         value.push(dailyT);
+
 
 // function getValue() {
-// 	return localStorage.getItem('nameOfItem');  
+
+// 	return localStorage.getItem('taskDescription');  
+
 // } // Gets the value of 'nameOfItem' and returns it
-// console.log(getValue()); //'value';
+ 
 
+// getValue();
 
-// var test = false;
-// var saveIcon = document.querySelector('#save-task')
+   
+// 2ND. FUNCTION / DOM TRAVERSAL / METHODS : PARENTS, CHILDREN, SIBLINGS.
 
-// $('#save-task').on("click", function() {
-//     var saveTask = $("click");
-//     let saveTask = JSON.parse(localStorage.getItem("storedPlans"));
+// $(document).ready(function(){   
 
-//     let saveTask = JSON.parse(localStorage.getItem("storedPlans"));
-//     // if (test) { console.log(storedPlans); }
+//     $(".mySaveBtn").click(function(e){
+//         e.preventDefault();
+//         var jsonObj = [];
+//         dailyT = {}
+//         count = 0;
 
-//  }
-// );
+//         $('input[type=text]').each(function(){
+//             if($.trim($(this).val()) && ($(this).attr('everyday').indexOf("dailyTaks") >= 0)){
+//                 dailyT[count++] = $(this).val() 
+//             }
+//         });
 
+//         dailyT['everyHour'] = $(".userInput").val();
 
+//         jsonObj.push(dailyT);
+//         console.log(jsonObj);
 
+//        var jsonString= JSON.stringify(jsonObj);
+//        localStorage.setItem("everyTask", jsonString);
 
+//        /* remove localstorage */
+//        // localStorage.removeItem("jsonString");
 
+//        /* get localstorage */
+//        // console.log(localStorage.getItem("jsonString"));
+//     });
 
-
-
-
-
-
-
-
-
-// STEP 3 : ADD COLOR CODE FOR PAST HOURS, PRESENT, AND FUTURE HOURS OF THE SAME DAY.
-
-// make background color of / past hours red / current hour gray / future hours green
-// var hourPast = hourPast < currentTime;
-// var hourNow = getCurrentTime;
-// var hourFuture = hourFuture < currentTime;
-
-// // if currentTime > hourNow make background color gray//
-
-// $(document).ready(function() {
-
-// var hourNow = getCurrentTime;
-
-//     function backgroundColorEdit(){
-//         if (hourNow == getCurrentTime){
-//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#ff0000";
-//         }else if (hourNow < currentTime){
-//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#d3d3d3";
-//         }else 
-//         {
-//             document.getElementsByClassName("backgroundTool").style.backgroundColor = "#90ee90";
-//         }
-// }
-
-
-// var click = "",
-
-
-// $('edit-task').ready(function() {
-//     $('edit-task').click(edit);
 // });
 
 
@@ -188,18 +125,42 @@ $('#edit-task').click(function() {
 
 
 
-// char hours = ["9AM","10AM","11AM","12PM","1PM","2PM","3PM","4PM","5PM"];
 
 
 
-// // The following object masquerades as an array.
-// var fakeArray = { "length": 2, 0: "Addy", 1: "Subtracty" };
- 
-// // Therefore, convert it to a real array
-// var realArray = $.makeArray( fakeArray )
- 
-// // Now it can be used reliably with $.map()
-// $.map( realArray, function( val, i ) {
-//   // Do something
+
+
+
+
+
+// $(function () {
+
+// 2ND. FUNCTION / DOM TRAVERSAL / METHODS : PARENTS, CHILDREN, SIBLINGS.
+
+//     $(".mySaveBtn").click(function () {
+//       data.push({
+//           id: userInput(),
+//           name: 'dailyT',
+//           description: 'things to do'
+//       })
+// localStorage.setItem("userInput", JSON.stringify(userInput);
+
+//     })
+//     var data = localStorage.getItem("userInput");
+
 // });
 
+
+
+// }); // MAIN FUNCT TO WHEN DOCUMENT IS READY.
+
+
+// $('#save-btn').on('click', function () {
+//     $('#save-btn .saved-task').html('testing');
+//     // $(this).toggleClass('task');
+
+     // LOOP FOR EACH TASK ARRAY AND TASK OBJECT WITH NEW CONTENT AND CONDITIONALS.
+//   for (var i = 0; i < tasks.length; i++) {
+//     if (tasks[i].id === parseInt(taskId)) {
+//       tasks[i].name = taskName;
+//}
