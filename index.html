@@ -45,11 +45,11 @@
         <div class="row">
             <!-- Span 1 of 12 columns -->
              <div id="9am" class="col-1 bg-white p-3 border text-center">
-                <h8 class="vertical-center">9am</h4>
+                <h8 class="day-hours vertical-center">9am</h4>
              </div>
-       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
-       <div id="save-task" class="saved col-1 bg-primary p-3 border">
-           <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+       <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
+       <div id="save-task" class="savedTask col-1 bg-primary p-3 border">
+           <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="9am">
        </div>
      </div>
 
@@ -61,9 +61,9 @@
          <div id="10am" class="col-1 bg-white p-3 border text-center">
             <h8 class="vertical-center">10am</h4>
          </div>
-         <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+         <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
          <div id="save-task" class="col-1 bg-primary p-3 border">
-            <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+            <img type="button" id="ten" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="10am">
          </div>
  </div>
  
@@ -75,9 +75,9 @@
      <div id="11am" class="col-1 bg-white p-3 border text-center">
         <h8 class="vertical-center">11am</h4>
      </div>
-       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+       <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
       <div id="save-task" class="col-1 bg-primary p-3 border">
-         <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+         <img type="button" id="eleven" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="11am">
       </div>
 </div>
 
@@ -89,9 +89,9 @@
  <div id="12pm" class="col-1 bg-white p-3 border text-center">
     <h8 class="vertical-center">12pm</h4>
  </div>
- <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+ <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
  <div id="save-task" class="col-1 bg-primary p-3 border">
-   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="12pm">
 </div>
 </div>
 
@@ -103,9 +103,9 @@
      <div id="1pm" class="col-1 bg-white p-3 border text-center">
         <h8 class="vertical-center">1pm</h4>
      </div>
-     <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+     <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
      <div id="save-task" class="col-1 bg-primary p-3 border">
-      <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+      <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="1pm">
    </div>
 </div>
 
@@ -117,9 +117,9 @@
  <div id="2pm" class="col-1 bg-white p-3 border text-center">
     <h8 class="vertical-center">2pm</h4>
  </div>
-       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+       <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
 <div id="save-task" class="col-1 bg-primary p-3 border">
-   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="2pm">
 </div>
 </div>
 
@@ -130,9 +130,9 @@
      <div id="3pm" class="col-1 bg-white p-3 border text-center">
         <h8 class="vertical-center">3pm</h4>
      </div>
-       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+       <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
 <div id="save-task" class="col-1 bg-primary p-3 border">
-   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="3pm">
 </div>
 </div>
 
@@ -144,9 +144,9 @@
  <div id="4pm" class="col-1 bg-white p-3 border text-center">
     <h8 class="vertical-center">4pm</h4>
  </div>
-       <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+       <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
 <div id="save-task" class="col-1 bg-primary p-3 border">
-   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+   <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="4pm">
 </div>
 </div>
 
@@ -157,9 +157,9 @@
      <div id="5pm" class="col-1 bg-white p-3 border text-center">
         <h8 class="vertical-center">5pm</h4>
      </div>
-           <input id="edit-task" class="disabled col-10 bg-light p-3 border" disable="true"></input>
+           <input type="text" id="edit-task" class="disabled col-10 bg-light p-3 border userInput" disable="true" value=""></input>
     <div id="save-task" class="col-1 bg-primary p-3 border">
-      <img id= "mySaveBtn" type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center">
+      <img type="button" src="./assets/img/save-icon.png" alt="save-task" width="30px" height="30px" class="vertical-center mySaveBtn" data-dayhourId="5pm">
    </div>
     </div>
     
